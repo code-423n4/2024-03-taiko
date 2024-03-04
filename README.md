@@ -150,7 +150,7 @@ All files outside of [packages/protocol/contracts](packages/protocol/contracts) 
 - Our vaults are designed to work with all ERC20, ERC1155, and ERC721 tokens, respectively.
 - The AssignmentHook contract shall support any ERC20 tokens and Ether as proving fees.
 - The core protocol supports only TaikoToken as bonds.
-- Contracts in [packages/contracts/team](packages/contracts/team) are expected to be deployed on Taiko L2 and only work with the `BridgedERC20` token (not the `TaikoToken`) and a future Taiko NFT (ERC-721).
+- Contracts in [packages/protocol/contracts/team](packages/protocol/contracts/team) are expected to be deployed on Taiko L2 and only work with the `BridgedERC20` token (not the `TaikoToken`) and a future Taiko NFT (ERC-721).
 - `TaikoL1`, `TaikoGovernor`, `TaikoTimelockController`, and `TaikoToken` will be deployed on Ethereum; `TaikoL2` will be pre-deployed on Taiko L2 before genesis. All other contracts, including `AddressManager`, `SignalService`, `Bridge`, all vaults and bridged tokens, will be deployed on both Ethereum and Taiko L2.
 - All contracts have an owner who can upgrade the contract code and perform certain special actions. There are also special named roles such as *proposer*, *proposer_one*, *bridge_pauser* that can call special functions. These named roles can be configured to be `address(0)` to disable these functions. Please search for `onlyFromNamed` to locate these special roles.
 - `BridgedERC20` has a special role called *snapshooter*; once set, this role can take snapshots.
