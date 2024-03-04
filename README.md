@@ -41,6 +41,12 @@ There are also a few documents in [packages/protocol/docs](packages/protocol/doc
 
 A built-in cross-layer communication mechanism is also included in the core protocol code to facilitate communication across multiple Taiko L2s and/or L3s. We call it multi-hop bridging. You can learn about the basic design [here](packages/protocol/docs/multihop_bridging_deployment.md).
 
+## Whitepapers
+
+- Whitepaper Update Notice: The current version of the Taiko [whitepaper](packages/protocol/docs/taiko-whitepaper.pdf)  outlines the fundamental principles of our Base rollup design. Please note, however, that this document has not been updated recently, and as such, some of the details may not accurately reflect the latest developments in our project. While the whitepaper does provide a valuable overview of Taiko's core concepts, it does not include information on our Contestable Rollup features, which are a significant part of our evolving architecture.
+
+- Tokenomics Whitepaper Overview: For a straightforward explanation of how the Taiko token integrates within our protocol, refer to our [tokenomics whitepaper](packages/protocol/docs/tokenomics-whitepaper.pdf). This document succinctly details the use of Taiko tokens as bonding mechanisms within the Taiko ecosystem, offering insight into our tokenomic strategy.
+
 ## Links
 
 
