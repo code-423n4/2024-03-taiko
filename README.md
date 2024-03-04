@@ -173,7 +173,7 @@ All files outside of [packages/protocol/contracts](packages/protocol/contracts) 
 - How many external imports are there?: 52
 - How many separate interfaces and struct definitions are there for the contracts within scope?: 85
 - Does most of your code generally use composition or inheritance?: Composition   
-- How many external calls?: 0   
+- How many external calls?: 17
 - What is the overall line coverage percentage provided by your tests?: 79
 - Is this an upgrade of an existing system?: False
 - Check all that apply (e.g. timelock, NFT, AMM, ERC20, rollups, etc.): ERC20, ERC721, ERC1155, Rollup, SGX, Multi-Chain, Bridging
