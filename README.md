@@ -173,7 +173,7 @@ All files outside of [packages/protocol/contracts](packages/protocol/contracts) 
 
 ## Scoping Details 
 
-- If you have a public code repo, please share it here: https://github.com/taikoxyz/taiko-mono/tree/main/packages/protocol 
+- If you have a public code repo, please share it here: https://github.com/taikoxyz/taiko-mono/tree/v1.0.0
 - How many contracts are in scope?: 81
 - Total SLoC for these contracts?: 7611
 - How many external imports are there?: 52
