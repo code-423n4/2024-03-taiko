@@ -161,50 +161,55 @@ The following files are out of scope:
 
 # Additional Context
 
-- [ ] Describe any novel or unique curve logic or mathematical models implemented in the contracts
-- [ ] Please list specific ERC20 that your protocol is anticipated to interact with. Could be "any" (literally anything, fee on transfer tokens, ERC777 tokens and so forth) or a list of tokens you envision using on launch.
-- [ ] Please list specific ERC721 that your protocol is anticipated to interact with.
-- [ ] Which blockchains will this code be deployed to, and are considered in scope for this audit?
-- [ ] Please list all trusted roles (e.g. operators, slashers, pausers, etc.), the privileges they hold, and any conditions under which privilege escalation is expected/allowable
-- [ ] In the event of a DOS, could you outline a minimum duration after which you would consider a finding to be valid? This question is asked in the context of most systems' capacity to handle DoS attacks gracefully for a certain period.
-- [ ] Is any part of your implementation intended to conform to any EIP's? If yes, please list the contracts in this format: 
-  - `Contract1`: Should comply with `ERC/EIPX`
-  - `Contract2`: Should comply with `ERC/EIPY`
+- Our vaults shall work with all ERC20, ERC1155, and ERC721 tokens, respectively.
+- The AssignmentHook contract shall support any ERC20 tokens and Ether as proving fees.
+- The core protocol only supports TaikoToken as bonds.
+- Contracts in `packages/contracts/team` are expect with work the TaikoToken.sol and a future (ERC-721) Taiko NFT only .
+- TaikoL1, TaikoGovernor, TaikoTimelockController, and TaikoToken will be deployed on Ethereum; TaikoL2 will be deployed on Taiko L2. All other contracts including AddressManager, SignalService, Bridge, Vaults, and Bridged tokens will be deployed on both Ethereum and Taiko L2.
+- All contracts have an owner who can upgrade contract code and perform certain special actions. There are also special named roles such as "proposer", "proposer_one", "bridge_pauser" that can call special functions, these named roles can be configured to be address(0) to disable these functions. Please search for `onlyFromNamed` to locate these special roles.
+- `BridgedERC20` has a special role called snapshooter, once set, this role can take snapshots.
 
-## Attack ideas (Where to look for bugs)
-*List specific areas to address - see [this blog post](https://medium.com/code4rena/the-security-council-elections-within-the-arbitrum-dao-a-comprehensive-guide-aa6d001aae60#9adb) for an example*
 
-## Main invariants
-*Describe the project's main invariants (properties that should NEVER EVER be broken).*
+## Attack ideas
+
+- DoS attacking the core protocol.
+- Exploit bugs in Merkle proof verification logics.
+- Exploit potential bugs in multi-hop bridging, for example, a multi-hop may contains a loop.
+- Construct bridge messages whose hash collide.
+- Keep contesting valid proofs to delay block confirmation.
+- Exhaust the L1 block proposing ring-buffer to hault the chain.
+- Explore bugs in L2's anchor transaction.
+
 
 ## Scoping Details 
-[ ⭐️ SPONSORS: please confirm/edit the information below. ]
 
-```
+
 - If you have a public code repo, please share it here: https://github.com/taikoxyz/taiko-mono/tree/main/packages/protocol 
-- How many contracts are in scope?: 79   
-- Total SLoC for these contracts?: 5890  
-- How many external imports are there?: 35  
-- How many separate interfaces and struct definitions are there for the contracts within scope?: 68  
+- How many contracts are in scope?: 81
+- Total SLoC for these contracts?: 7611
+- How many external imports are there?: 52
+- How many separate interfaces and struct definitions are there for the contracts within scope?: 85
 - Does most of your code generally use composition or inheritance?: Composition   
 - How many external calls?: 0   
 - What is the overall line coverage percentage provided by your tests?: 79
 - Is this an upgrade of an existing system?: False
-- Check all that apply (e.g. timelock, NFT, AMM, ERC20, rollups, etc.): ERC-20 Token, Non ERC-20 Token, Uses L2, NFT, Multi-Chain  
+- Check all that apply (e.g. timelock, NFT, AMM, ERC20, rollups, etc.): ERC20, ERC721, ERC1155, Rollup, SGX, Multi-Chain, Bridging
 - Is there a need to understand a separate part of the codebase / get context in order to audit this part of the protocol?: False   
-- Please describe required context:   
-- Does it use an oracle?:  
+- Please describe required context: you must understand how rollup works.
+- Does it use an oracle?:  No
 - Describe any novel or unique curve logic or mathematical models your code uses: None 
 - Is this either a fork of or an alternate implementation of another project?: False  
-- Does it use a side-chain?:
-- Describe any specific areas you would like addressed:
-```
+- Does it use a side-chain?: No
+
 
 # Tests
 
-*Provide every step required to build the project from a fresh git clone, as well as steps to run the tests with a gas report.* 
-
-*Note: Many wardens run Slither as a first pass for testing.  Please document any known errors with no workaround.* 
+```
+cd packages/protocol/
+pnpm install
+pnpm compile
+pnpm test
+```
 
 ## Miscellaneous
 
