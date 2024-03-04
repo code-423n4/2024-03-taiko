@@ -53,20 +53,38 @@ The 4naly3er report can be found [here](https://github.com/code-423n4/2024-03-ta
 
 _Note for C4 wardens: Anything included in this `Automated Findings / Publicly Known Issues` section is considered a publicly known issue and is ineligible for awards._
 
-[ ⭐️ SPONSORS: Are there any known issues or risks deemed acceptable that shouldn't lead to a valid finding? If so, list them here. ]
-
+- All code inside contracts/team/ uses ERC20's `transferFrom` instead of `safeTransferFrom`. This is known and acceptable.
 
 # Overview
 
-[ ⭐️ SPONSORS: add info here ]
+Taiko is a Based rollup. You can learn about Based rollup by following links below:
+
+- https://ethresear.ch/t/based-rollups-superpowers-from-l1-sequencing/15016
+- https://taiko.mirror.xyz/7dfMydX1FqEx9_sOvhRt3V8hJksKSIWjzhCVu7FyMZU
+
+This version of the Taiko protocol is also known as Based Contestable Rollup, or BCR. You can learn about BCR design using these links:
+
+- https://taiko.mirror.xyz/Z4I5ZhreGkyfdaL5I9P0Rj0DNX4zaWFmcws-0CVMJ2A
+- https://www.youtube.com/watch?v=A6ncZirXPfc
+
+
+There are also a few documents in `package/protocol/docs` that you can take a look. We are working on making them into our official documentation before mainnet launch. Sorry that these files are not well maintained but I think they may give you some extra insights into BCR's design and/or implementation.
+
+A built-in cross-layer communication machinmims is also included in the core protocol code to faciliate cross-multiple layer communcation. We call it multi-hop bridging. You can learn about the basic design in [`this file`](packages/protocol/docs/multihop_bridging_deployment.md).
+
 
 ## Links
 
 - **Previous audits:** 
-- **Documentation:**
-- **Website:**
-- **Twitter:** 
-- **Discord:** 
+
+An [older version](https://github.com/taikoxyz/taiko-mono/releases/tag/protocol-v0.16.0%2Bbcr.locked) of the protocol has been audited Sigma Prime ([report](packages/protocol/audit/sigma_prime_taiko_smart_contract_security_assessment_report_v2_0.pdf)). The corresponding bridge code has been audited by QuillAudits ([report](packages/protocol/audit/quill_audits_taiko_smart_contract_audit_report.pdf)).
+
+Please see [a list of changes](https://github.com/taikoxyz/taiko-mono/releases/tag/protocol-v1.0.0) between the audited version and the current v1.0.0 release.
+
+- **Documentation:** https://docs.taiko.xyz
+- **Website:** https://taiko.xyz
+- **Twitter:** https://twitter.com/taikoxyz
+- **Discord:** https://discord.gg/taikoxyz
 
 
 # Scope
