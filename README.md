@@ -139,42 +139,33 @@ A built-in cross-layer communication mechanism is also included in the core prot
 | [contracts/automata-attestation/utils/X509DateUtils.sol](packages/contracts/automata-attestation/utils/X509DateUtils.sol) | 63   | SGX supporting code |      |          |
 
 
-## Out of scope
+Here are the improved and corrected sentences:
 
-The following files are out of scope:
+## Out of Scope
 
-- genesis/*
-- test/*
-- simulation/*
-- script/*
-- deployments/*
-- utils/*
+All files outside of [packages/protocol/contracts](packages/protocol/contracts) are out of scope.
 
+## Additional Context
 
-# Additional Context
-
-- Our vaults shall work with all ERC20, ERC1155, and ERC721 tokens, respectively.
+- Our vaults are designed to work with all ERC20, ERC1155, and ERC721 tokens, respectively.
 - The AssignmentHook contract shall support any ERC20 tokens and Ether as proving fees.
-- The core protocol only supports TaikoToken as bonds.
-- Contracts in `packages/contracts/team` are expect with work the TaikoToken.sol and a future (ERC-721) Taiko NFT only .
-- TaikoL1, TaikoGovernor, TaikoTimelockController, and TaikoToken will be deployed on Ethereum; TaikoL2 will be deployed on Taiko L2. All other contracts including AddressManager, SignalService, Bridge, Vaults, and Bridged tokens will be deployed on both Ethereum and Taiko L2.
-- All contracts have an owner who can upgrade contract code and perform certain special actions. There are also special named roles such as "proposer", "proposer_one", "bridge_pauser" that can call special functions, these named roles can be configured to be address(0) to disable these functions. Please search for `onlyFromNamed` to locate these special roles.
-- `BridgedERC20` has a special role called snapshooter, once set, this role can take snapshots.
+- The core protocol supports only TaikoToken as bonds.
+- Contracts in [packages/contracts/team](packages/contracts/team) are expected to be deployed on Taiko L2 and only work with the `BridgedERC20` token (not the `TaikoToken`) and a future Taiko NFT (ERC-721).
+- `TaikoL1`, `TaikoGovernor`, `TaikoTimelockController`, and `TaikoToken` will be deployed on Ethereum; `TaikoL2` will be pre-deployed on Taiko L2 before genesis. All other contracts, including `AddressManager`, `SignalService`, `Bridge`, all vaults and bridged tokens, will be deployed on both Ethereum and Taiko L2.
+- All contracts have an owner who can upgrade the contract code and perform certain special actions. There are also special named roles such as *proposer*, *proposer_one*, *bridge_pauser* that can call special functions. These named roles can be configured to be `address(0)` to disable these functions. Please search for `onlyFromNamed` to locate these special roles.
+- `BridgedERC20` has a special role called *snapshooter*; once set, this role can take snapshots.
 
+## Attack Ideas
 
-## Attack ideas
-
-- DoS attacking the core protocol.
-- Exploit bugs in Merkle proof verification logics.
-- Exploit potential bugs in multi-hop bridging, for example, a multi-hop may contains a loop.
-- Construct bridge messages whose hash collide.
-- Keep contesting valid proofs to delay block confirmation.
-- Exhaust the L1 block proposing ring-buffer to hault the chain.
-- Explore bugs in L2's anchor transaction.
-
+- Launching a DoS attack on the core protocol.
+- Exploiting bugs in Merkle proof verification logic.
+- Exploiting potential bugs in multi-hop bridging, for example, use a multi-hop that contains a loop.
+- Constructing bridge messages whose hashes collide.
+- Continuously contesting valid proofs to delay block confirmation.
+- Exhausting the L1 block proposing ring-buffer to halt the chain.
+- Exploring bugs in L2's anchor transaction.
 
 ## Scoping Details 
-
 
 - If you have a public code repo, please share it here: https://github.com/taikoxyz/taiko-mono/tree/main/packages/protocol 
 - How many contracts are in scope?: 81
@@ -192,7 +183,6 @@ The following files are out of scope:
 - Describe any novel or unique curve logic or mathematical models your code uses: None 
 - Is this either a fork of or an alternate implementation of another project?: False  
 - Does it use a side-chain?: No
-
 
 # Tests
 
