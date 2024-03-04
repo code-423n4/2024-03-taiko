@@ -61,15 +61,6 @@ Please see [a list of changes](https://github.com/taikoxyz/taiko-mono/releases/t
 
 # Scope
 
-[ ⭐️ SPONSORS: add scoping and technical details here ]
-
-- [ ] In the table format shown below, provide the name of each contract and:
-  - [ ] source lines of code (excluding blank lines and comments) in each *For line of code counts, we recommend running prettier with a 100-character line length, and using [cloc](https://github.com/AlDanial/cloc).* 
-  - [ ] external contracts called in each
-  - [ ] libraries used in each
-
-*List all files in scope in the table below (along with hyperlinks) -- and feel free to add notes here to emphasize areas of focus.*
-
 | Contract                                                    | SLOC | Purpose                                                           | Libraries used                                 | Priority |
 |--------------------------------------------------------------|------|-------------------------------------------------------------------|--------------------------------------|----------|
 | [contracts/common/IAddressManager.sol](packages/contracts/common/IAddressManager.sol)                                     | 4    | Mananges registered addresses                                    |                                      |          |
@@ -98,10 +89,10 @@ Please see [a list of changes](https://github.com/taikoxyz/taiko-mono/releases/t
 | [contracts/L1/TaikoEvents.sol](packages/contracts/L1/TaikoEvents.sol)                                                       | 37   | Events whose definations must match those in L1/libs/Lib***.sol. |                                      |          |
 | [contracts/L1/TaikoL1.sol](packages/contracts/L1/TaikoL1.sol)                                                               | 149  | Taiko BCR main contract on L1 (Ethereum)                         |                                      | Medium   |
 | [contracts/L1/TaikoToken.sol](packages/contracts/L1/TaikoToken.sol)                                                         | 85   | The protocol token. TaikoToken is on L1.                         |                                      | Medium   |
-| [contracts/L1/tiers/ITierProvider.sol](packages/contracts/L1/tiers/ITierProvider.sol)                                       | 21   | out of scope                                                      |                                      |          |
-| [contracts/L1/tiers/DevnetTierProvider.sol](packages/contracts/L1/tiers/DevnetTierProvider.sol)                             | 40   | out of scope                                                      |                                      |          |
-| [contracts/L1/tiers/MainnetTierProvider.sol](packages/contracts/L1/tiers/MainnetTierProvider.sol)                           | 52   | out of scope                                                      |                                      |          |
-| [contracts/L1/tiers/TestnetTierProvider.sol](packages/contracts/L1/tiers/TestnetTierProvider.sol)                           | 52   | out of scope                                                      |                                      |          |
+| [contracts/L1/tiers/ITierProvider.sol](packages/contracts/L1/tiers/ITierProvider.sol)                                       | 21   |                                                       |                                      |          |
+| [contracts/L1/tiers/DevnetTierProvider.sol](packages/contracts/L1/tiers/DevnetTierProvider.sol)                             | 40   |                                                       |                                      |          |
+| [contracts/L1/tiers/MainnetTierProvider.sol](packages/contracts/L1/tiers/MainnetTierProvider.sol)                           | 52   |                                                       |                                      |          |
+| [contracts/L1/tiers/TestnetTierProvider.sol](packages/contracts/L1/tiers/TestnetTierProvider.sol)                           | 52   |                                                       |                                      |          |
 | [contracts/L2/CrossChainOwned.sol](packages/contracts/L2/CrossChainOwned.sol)                                               | 45   |                                                                   |                                      |          |
 | [contracts/L2/Lib1559Math.sol](packages/contracts/L2/Lib1559Math.sol)                                                       | 33   | Math to calculate EIP-1559 base fee                              | /thirdparty/solmate                 | 🔥High     |
 | [contracts/L2/TaikoL2.sol](packages/contracts/L2/TaikoL2.sol)                                                               | 180  |                                                                   |                                      | 🔥High     |
@@ -160,7 +151,6 @@ Please see [a list of changes](https://github.com/taikoxyz/taiko-mono/releases/t
 
 The following files are out of scope:
 
-- contracts/L1/tiers/*.sol*
 - genesis/*
 - test/*
 - simulation/*
