@@ -11,8 +11,8 @@
 - Join [C4 Discord](https://discord.gg/code4rena) to register
 - Submit findings [using the C4 form](https://code4rena.com/contests/2024-03-taiko/submit)
 - [Read our guidelines for more details](https://docs.code4rena.com/roles/wardens)
-- Starts March 4, 2024 20:00 UTC
-- Ends March 25, 2024 20:00 UTC
+- Starts March 6, 2024 20:00 UTC
+- Ends March 27, 2024 20:00 UTC
 
 ## Automated Findings / Publicly Known Issues
 
