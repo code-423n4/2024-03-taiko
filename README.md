@@ -27,21 +27,19 @@ _Note for C4 wardens: Anything included in this `Automated Findings / Publicly K
 
 # Overview
 
-Taiko is a Based rollup. You can learn about Based rollup by following links below:
+ Taiko is a Based rollup. You can learn about Based rollups by following the links below:
 
-- https://ethresear.ch/t/based-rollups-superpowers-from-l1-sequencing/15016
-- https://taiko.mirror.xyz/7dfMydX1FqEx9_sOvhRt3V8hJksKSIWjzhCVu7FyMZU
+- [https://ethresear.ch/t/based-rollups-superpowers-from-l1-sequencing/15016](https://ethresear.ch/t/based-rollups-superpowers-from-l1-sequencing/15016)
+- [https://taiko.mirror.xyz/7dfMydX1FqEx9_sOvhRt3V8hJksKSIWjzhCVu7FyMZU](https://taiko.mirror.xyz/7dfMydX1FqEx9_sOvhRt3V8hJksKSIWjzhCVu7FyMZU)
 
 This version of the Taiko protocol is also known as Based Contestable Rollup, or BCR. You can learn about BCR design using these links:
 
-- https://taiko.mirror.xyz/Z4I5ZhreGkyfdaL5I9P0Rj0DNX4zaWFmcws-0CVMJ2A
-- https://www.youtube.com/watch?v=A6ncZirXPfc
+- [https://taiko.mirror.xyz/Z4I5ZhreGkyfdaL5I9P0Rj0DNX4zaWFmcws-0CVMJ2A](https://taiko.mirror.xyz/Z4I5ZhreGkyfdaL5I9P0Rj0DNX4zaWFmcws-0CVMJ2A)
+- [https://www.youtube.com/watch?v=A6ncZirXPfc](https://www.youtube.com/watch?v=A6ncZirXPfc)
 
+There are also a few documents in [packages/protocol/docs] that you can take a look at. We are working on converting them into our official documentation before the mainnet launch. Apologies that these files are not well-maintained, but I think they may provide some additional insights into BCR's design and/or implementation.
 
-There are also a few documents in [packages/protocol/docs](packages/protocol/docs) that you can take a look. We are working on making them into our official documentation before mainnet launch. Sorry that these files are not well maintained but I think they may give you some extra insights into BCR's design and/or implementation.
-
-A built-in cross-layer communication machinmims is also included in the core protocol code to faciliate cross-multiple layer communcation. We call it multi-hop bridging. You can learn about the basic design in [`this file`](packages/protocol/docs/multihop_bridging_deployment.md).
-
+A built-in cross-layer communication mechanism is also included in the core protocol code to facilitate communication across multiple layers. We call it multi-hop bridging. You can learn about the basic design in [`this file`](packages/protocol/docs/multihop_bridging_deployment.md).
 
 ## Links
 
