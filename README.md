@@ -40,7 +40,7 @@ This version of the Taiko protocol is also known as Based Contestable Rollup, or
 - https://www.youtube.com/watch?v=A6ncZirXPfc
 
 
-There are also a few documents in `package/protocol/docs` that you can take a look. We are working on making them into our official documentation before mainnet launch. Sorry that these files are not well maintained but I think they may give you some extra insights into BCR's design and/or implementation.
+There are also a few documents in [package/protocol/docs](ackage/protocol/docs) that you can take a look. We are working on making them into our official documentation before mainnet launch. Sorry that these files are not well maintained but I think they may give you some extra insights into BCR's design and/or implementation.
 
 A built-in cross-layer communication machinmims is also included in the core protocol code to faciliate cross-multiple layer communcation. We call it multi-hop bridging. You can learn about the basic design in [`this file`](packages/protocol/docs/multihop_bridging_deployment.md).
 
