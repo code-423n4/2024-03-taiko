@@ -43,16 +43,12 @@ A built-in cross-layer communication mechanism is also included in the core prot
 
 ## Links
 
-- **Previous audits:** 
 
-An [older version](https://github.com/taikoxyz/taiko-mono/releases/tag/protocol-v0.16.0%2Bbcr.locked) of the protocol has been audited Sigma Prime ([report](packages/protocol/audit/sigma_prime_taiko_smart_contract_security_assessment_report_v2_0.pdf)). The corresponding bridge code has been audited by QuillAudits ([report](packages/protocol/audit/quill_audits_taiko_smart_contract_audit_report.pdf)).
-
-Please see [a list of changes](https://github.com/taikoxyz/taiko-mono/releases/tag/protocol-v1.0.0) between the audited version and the current v1.0.0 release.
-
-- **Documentation:** https://docs.taiko.xyz
-- **Website:** https://taiko.xyz
-- **Twitter:** https://twitter.com/taikoxyz
-- **Discord:** https://discord.gg/taikoxyz
+- **Previous audits:** An older version of the protocol has been audited by Sigma Prime ([report](packages/protocol/audit/sigma_prime_taiko_smart_contract_security_assessment_report_v2_0.pdf)). The corresponding bridge code has been audited by QuillAudits ([report](packages/protocol/audit/quill_audits_taiko_smart_contract_audit_report.pdf)). Please see [the list of changes](https://github.com/taikoxyz/taiko-mono/releases/tag/protocol-v1.0.0) between the audited version and the current v1.0.0 release.
+- **Documentation:** [https://docs.taiko.xyz](https://docs.taiko.xyz)
+- **Website:** [https://taiko.xyz](https://taiko.xyz)
+- **Twitter:** [https://twitter.com/taikoxyz](https://twitter.com/taikoxyz)
+- **Discord:** [https://discord.gg/taikoxyz](https://discord.gg/taikoxyz)
 
 
 # Scope
