@@ -137,7 +137,7 @@ A built-in cross-layer communication mechanism is also included in the core prot
 | [contracts/automata-attestation/utils/SHA1.sol](packages/contracts/automata-attestation/utils/SHA1.sol)       | 166  | SGX supporting code |      |          |
 | [contracts/automata-attestation/utils/SigVerifyLib.sol](packages/contracts/automata-attestation/utils/SigVerifyLib.sol) | 114  | SGX supporting code |      |          |
 | [contracts/automata-attestation/utils/X509DateUtils.sol](packages/contracts/automata-attestation/utils/X509DateUtils.sol) | 63   | SGX supporting code |      |          |
-```
+
 
 ## Out of scope
 
