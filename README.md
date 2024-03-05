@@ -16,7 +16,7 @@
 
 ## Publicly Known Issues
 
-_Note for C4 wardens: Anything included in this `Automated Findings / Publicly Known Issues` section is considered a publicly known issue and is ineligible for awards._
+_Note for C4 wardens: Anything included in this `Publicly Known Issues` section is considered a publicly known issue and is ineligible for awards._
 
 - All code inside [packages/protocol/contracts/team](https://github.com/code-423n4/2024-03-taiko/blob/main/packages/protocol/contracts/team) uses ERC20's `transferFrom` instead of `safeTransferFrom`. This is known and acceptable.
 - All findings from our previous audit reports (see below) are ineligible for awards.
@@ -54,6 +54,8 @@ A built-in cross-layer communication mechanism is also included in the core prot
 
 
 # Scope
+
+*[See scope.txt](https://github.com/code-423n4/2024-03-taiko/blob/main/scope.txt)*
 
 | Contract                                                    | SLOC | Purpose                                                           | Libraries used                                 | Priority |
 |--------------------------------------------------------------|------|-------------------------------------------------------------------|--------------------------------------|----------|
@@ -187,11 +189,22 @@ All files outside of [packages/protocol/contracts](https://github.com/code-423n4
 
 # Tests
 
-```
+```bash
 cd packages/protocol/
 pnpm install
 pnpm compile
 pnpm test
+```
+
+## Slither
+
+*[See slither.txt](https://github.com/code-423n4/2024-03-taiko/blob/main/slither.txt)*
+
+Make sure you're using the latest version of Slither (0.10.1).
+
+```bash
+cd packages/protocol/
+slither .
 ```
 
 ## Miscellaneous

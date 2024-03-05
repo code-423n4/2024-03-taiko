@@ -1,0 +1,83 @@
+INFO:Detectors:
+AssignmentHook.onBlockProposed(TaikoData.Block,TaikoData.BlockMetadata,bytes) (contracts/L1/hooks/AssignmentHook.sol#62-130) uses arbitrary from in transferFrom: tko.transferFrom(_blk.assignedProver,taikoL1Address,_blk.livenessBond) (contracts/L1/hooks/AssignmentHook.sol#102)
+AssignmentHook.onBlockProposed(TaikoData.Block,TaikoData.BlockMetadata,bytes) (contracts/L1/hooks/AssignmentHook.sol#62-130) uses arbitrary from in transferFrom: IERC20(assignment.feeToken).safeTransferFrom(_meta.coinbase,_blk.assignedProver,proverFee) (contracts/L1/hooks/AssignmentHook.sol#114-116)
+TimelockTokenPool._withdraw(address,address) (contracts/team/TimelockTokenPool.sol#208-223) uses arbitrary from in transferFrom: IERC20(taikoToken).transferFrom(sharedVault,_to,amountToWithdraw) (contracts/team/TimelockTokenPool.sol#219)
+ERC20Airdrop.claimAndDelegate(address,uint256,bytes32[],bytes) (contracts/team/airdrop/ERC20Airdrop.sol#50-72) uses arbitrary from in transferFrom: IERC20(token).transferFrom(vault,user,amount) (contracts/team/airdrop/ERC20Airdrop.sol#63)
+ERC20Airdrop2.withdraw(address) (contracts/team/airdrop/ERC20Airdrop2.sol#88-94) uses arbitrary from in transferFrom: IERC20(token).transferFrom(vault,user,amount) (contracts/team/airdrop/ERC20Airdrop2.sol#91)
+USDCAdapter._burnToken(address,uint256) (contracts/tokenvault/adapters/USDCAdapter.sol#47-50) uses arbitrary from in transferFrom: usdc.transferFrom(_from,address(this),_amount) (contracts/tokenvault/adapters/USDCAdapter.sol#48)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#arbitrary-from-in-transferfrom
+INFO:Detectors:
+BridgedERC721.tokenURI(uint256) (contracts/tokenvault/BridgedERC721.sol#107-113) calls abi.encodePacked() with multiple dynamic arguments:
+	- string(abi.encodePacked(LibBridgedToken.buildURI(srcToken,srcChainId),Strings.toString(_tokenId))) (contracts/tokenvault/BridgedERC721.sol#108-112)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#abi-encodePacked-collision
+INFO:Detectors:
+AssignmentHook.onBlockProposed(TaikoData.Block,TaikoData.BlockMetadata,bytes) (contracts/L1/hooks/AssignmentHook.sol#62-130) ignores return value by tko.transferFrom(_blk.assignedProver,taikoL1Address,_blk.livenessBond) (contracts/L1/hooks/AssignmentHook.sol#102)
+LibProving.proveBlock(TaikoData.State,TaikoData.Config,IAddressResolver,TaikoData.BlockMetadata,TaikoData.Transition,TaikoData.TierProof) (contracts/L1/libs/LibProving.sol#91-266) ignores return value by tko.transfer(blk.assignedProver,blk.livenessBond) (contracts/L1/libs/LibProving.sol#196)
+LibProving.proveBlock(TaikoData.State,TaikoData.Config,IAddressResolver,TaikoData.BlockMetadata,TaikoData.Transition,TaikoData.TierProof) (contracts/L1/libs/LibProving.sol#91-266) ignores return value by tko.transferFrom(msg.sender,address(this),tier.contestBond) (contracts/L1/libs/LibProving.sol#242)
+LibProving._overrideWithHigherProof(TaikoData.TransitionState,TaikoData.Transition,TaikoData.TierProof,ITierProvider.Tier,IERC20,bool) (contracts/L1/libs/LibProving.sol#350-398) ignores return value by _tko.transfer(_ts.prover,_ts.validityBond + reward) (contracts/L1/libs/LibProving.sol#367)
+LibProving._overrideWithHigherProof(TaikoData.TransitionState,TaikoData.Transition,TaikoData.TierProof,ITierProvider.Tier,IERC20,bool) (contracts/L1/libs/LibProving.sol#350-398) ignores return value by _tko.transfer(_ts.contester,_ts.contestBond + reward) (contracts/L1/libs/LibProving.sol#371)
+LibProving._overrideWithHigherProof(TaikoData.TransitionState,TaikoData.Transition,TaikoData.TierProof,ITierProvider.Tier,IERC20,bool) (contracts/L1/libs/LibProving.sol#350-398) ignores return value by _tko.transfer(msg.sender,reward - _tier.validityBond) (contracts/L1/libs/LibProving.sol#382)
+LibProving._overrideWithHigherProof(TaikoData.TransitionState,TaikoData.Transition,TaikoData.TierProof,ITierProvider.Tier,IERC20,bool) (contracts/L1/libs/LibProving.sol#350-398) ignores return value by _tko.transferFrom(msg.sender,address(this),_tier.validityBond - reward) (contracts/L1/libs/LibProving.sol#384)
+LibVerifying.verifyBlocks(TaikoData.State,TaikoData.Config,IAddressResolver,uint64) (contracts/L1/libs/LibVerifying.sol#85-222) ignores return value by tko.transfer(ts.prover,bondToReturn) (contracts/L1/libs/LibVerifying.sol#189)
+TimelockTokenPool._withdraw(address,address) (contracts/team/TimelockTokenPool.sol#208-223) ignores return value by IERC20(taikoToken).transferFrom(sharedVault,_to,amountToWithdraw) (contracts/team/TimelockTokenPool.sol#219)
+ERC20Airdrop.claimAndDelegate(address,uint256,bytes32[],bytes) (contracts/team/airdrop/ERC20Airdrop.sol#50-72) ignores return value by IERC20(token).transferFrom(vault,user,amount) (contracts/team/airdrop/ERC20Airdrop.sol#63)
+ERC20Airdrop2.withdraw(address) (contracts/team/airdrop/ERC20Airdrop2.sol#88-94) ignores return value by IERC20(token).transferFrom(vault,user,amount) (contracts/team/airdrop/ERC20Airdrop2.sol#91)
+USDCAdapter._burnToken(address,uint256) (contracts/tokenvault/adapters/USDCAdapter.sol#47-50) ignores return value by usdc.transferFrom(_from,address(this),_amount) (contracts/tokenvault/adapters/USDCAdapter.sol#48)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#unchecked-transfer
+INFO:Detectors:
+TimelockTokenPool.getMyGrantSummary(address) (contracts/team/TimelockTokenPool.sol#176-199) performs a multiplication on the result of a division:
+	- _amountUnlocked = amountUnlocked / 1e18 (contracts/team/TimelockTokenPool.sol#197)
+	- costToWithdraw = _amountUnlocked * r.grant.costPerToken - r.costPaid (contracts/team/TimelockTokenPool.sol#198)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#divide-before-multiply
+INFO:Detectors:
+Reentrancy in TaikoL2.anchor(bytes32,bytes32,uint64,uint32) (contracts/L2/TaikoL2.sol#107-158):
+	External calls:
+	- ISignalService(resolve(signal_service,false)).syncChainData(ownerChainId,LibSignals.STATE_ROOT,_l1BlockId,_l1StateRoot) (contracts/L2/TaikoL2.sol#148-150)
+	State variables written after the call(s):
+	- lastSyncedBlock = _l1BlockId (contracts/L2/TaikoL2.sol#151)
+	TaikoL2.lastSyncedBlock (contracts/L2/TaikoL2.sol#50) can be used in cross function reentrancies:
+	- TaikoL2._calc1559BaseFee(TaikoL2.Config,uint64,uint32) (contracts/L2/TaikoL2.sol#252-297)
+	- TaikoL2.lastSyncedBlock (contracts/L2/TaikoL2.sol#50)
+	- publicInputHash = publicInputHashNew (contracts/L2/TaikoL2.sol#155)
+	TaikoL2.publicInputHash (contracts/L2/TaikoL2.sol#43) can be used in cross function reentrancies:
+	- TaikoL2.init(address,address,uint64,uint64) (contracts/L2/TaikoL2.sol#71-98)
+	- TaikoL2.publicInputHash (contracts/L2/TaikoL2.sol#43)
+Reentrancy in ERC20Vault.changeBridgedToken(ERC20Vault.CanonicalERC20,address) (contracts/tokenvault/ERC20Vault.sol#148-200):
+	External calls:
+	- IBridgedERC20(btokenOld_).changeMigrationStatus(_btokenNew,false) (contracts/tokenvault/ERC20Vault.sol#184)
+	- IBridgedERC20(_btokenNew).changeMigrationStatus(btokenOld_,true) (contracts/tokenvault/ERC20Vault.sol#185)
+	State variables written after the call(s):
+	- bridgedToCanonical[_btokenNew] = _ctoken (contracts/tokenvault/ERC20Vault.sol#188)
+	ERC20Vault.bridgedToCanonical (contracts/tokenvault/ERC20Vault.sol#45) can be used in cross function reentrancies:
+	- ERC20Vault.bridgedToCanonical (contracts/tokenvault/ERC20Vault.sol#45)
+	- canonicalToBridged[_ctoken.chainId][_ctoken.addr] = _btokenNew (contracts/tokenvault/ERC20Vault.sol#189)
+	ERC20Vault.canonicalToBridged (contracts/tokenvault/ERC20Vault.sol#49) can be used in cross function reentrancies:
+	- ERC20Vault.canonicalToBridged (contracts/tokenvault/ERC20Vault.sol#49)
+Reentrancy in CrossChainOwned.onMessageInvocation(bytes) (contracts/L2/CrossChainOwned.sol#36-54):
+	External calls:
+	- (success) = address(this).call(txdata) (contracts/L2/CrossChainOwned.sol#50)
+	State variables written after the call(s):
+	- TransactionExecuted(nextTxId ++,bytes4(txdata)) (contracts/L2/CrossChainOwned.sol#53)
+	CrossChainOwned.nextTxId (contracts/L2/CrossChainOwned.sol#19) can be used in cross function reentrancies:
+	- CrossChainOwned.nextTxId (contracts/L2/CrossChainOwned.sol#19)
+	- CrossChainOwned.onMessageInvocation(bytes) (contracts/L2/CrossChainOwned.sol#36-54)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-1
+INFO:Detectors:
+Guardians.isApproved(uint256).count (contracts/L1/provers/Guardians.sol#129) is a local variable never initialized
+ERC1155Vault._handleMessage(address,BaseNFTVault.BridgeTransferOp).i_scope_0 (contracts/tokenvault/ERC1155Vault.sol#269) is a local variable never initialized
+LibVerifying.verifyBlocks(TaikoData.State,TaikoData.Config,IAddressResolver,uint64).tierProvider (contracts/L1/libs/LibVerifying.sol#118) is a local variable never initialized
+LibVerifying.verifyBlocks(TaikoData.State,TaikoData.Config,IAddressResolver,uint64).numBlocksVerified (contracts/L1/libs/LibVerifying.sol#117) is a local variable never initialized
+Bridge.processMessage(IBridge.Message,bytes).refundAmount (contracts/bridge/Bridge.sol#266) is a local variable never initialized
+TaikoL2._calc1559BaseFee(TaikoL2.Config,uint64,uint32).numL1Blocks (contracts/L2/TaikoL2.sol#274) is a local variable never initialized
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#uninitialized-local-variables
+INFO:Detectors:
+LibVerifying._syncChainData(TaikoData.Config,IAddressResolver,uint64,bytes32) (contracts/L1/libs/LibVerifying.sol#224-243) ignores return value by (lastSyncedBlock) = signalService.getSyncedChainData(_config.chainId,LibSignals.STATE_ROOT,0) (contracts/L1/libs/LibVerifying.sol#234-236)
+LibVerifying._syncChainData(TaikoData.Config,IAddressResolver,uint64,bytes32) (contracts/L1/libs/LibVerifying.sol#224-243) ignores return value by signalService.syncChainData(_config.chainId,LibSignals.STATE_ROOT,_lastVerifiedBlockId,_stateRoot) (contracts/L1/libs/LibVerifying.sol#239-241)
+TaikoL2.anchor(bytes32,bytes32,uint64,uint32) (contracts/L2/TaikoL2.sol#107-158) ignores return value by ISignalService(resolve(signal_service,false)).syncChainData(ownerChainId,LibSignals.STATE_ROOT,_l1BlockId,_l1StateRoot) (contracts/L2/TaikoL2.sol#148-150)
+Bridge.sendMessage(IBridge.Message) (contracts/bridge/Bridge.sol#115-152) ignores return value by ISignalService(resolve(signal_service,false)).sendSignal(msgHash_) (contracts/bridge/Bridge.sol#150)
+Bridge._invokeMessageCall(IBridge.Message,bytes32,uint256) (contracts/bridge/Bridge.sol#477-508) ignores return value by (success_,None) = ExcessivelySafeCall.excessivelySafeCall(_message.to,_gasLimit,_message.value,64,_message.data) (contracts/bridge/Bridge.sol#497-503)
+Bridge._updateMessageStatus(bytes32,IBridge.Status) (contracts/bridge/Bridge.sol#515-526) ignores return value by ISignalService(resolve(signal_service,false)).sendSignal(signalForFailedMessage(_msgHash)) (contracts/bridge/Bridge.sol#522-524)
+LibAddress.sendEther(address,uint256,uint256) (contracts/libs/LibAddress.sol#22-37) ignores return value by (success) = ExcessivelySafeCall.excessivelySafeCall(_to,_gasLimit,_amount,64,) (contracts/libs/LibAddress.sol#27-33)
+SgxVerifier.registerInstance(V3Struct.ParsedV3QuoteStruct) (contracts/verifiers/SgxVerifier.sol#118-136) ignores return value by (verified) = IAttestation(automataDcapAttestation).verifyParsedQuote(_attestation) (contracts/verifiers/SgxVerifier.sol#128)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#unused-return
+INFO:Slither:. analyzed (158 contracts with 52 detectors), 37 result(s) found
