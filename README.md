@@ -198,7 +198,7 @@ pnpm test
 
 ## Slither
 
-*[See slither.txt](https://github.com/code-423n4/2024-03-taiko/blob/main/slither.txt)*
+*[See slither.txt](https://github.com/code-423n4/2024-03-taiko/blob/main/packages/protocol/slither.txt)*
 
 Make sure you're using the latest version of Slither (0.10.1).
 
