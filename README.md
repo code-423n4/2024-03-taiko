@@ -16,6 +16,8 @@
 
 ## Publicly Known Issues
 
+The 4naly3er report can be found [here](https://github.com/code-423n4/YYYY-MM-contest-candidate/blob/main/4naly3er-report.md).
+
 _Note for C4 wardens: Anything included in this `Publicly Known Issues` section is considered a publicly known issue and is ineligible for awards._
 
 - All code inside [packages/protocol/contracts/team](https://github.com/code-423n4/2024-03-taiko/blob/main/packages/protocol/contracts/team) uses ERC20's `transferFrom` instead of `safeTransferFrom`. This is known and acceptable.
