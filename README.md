@@ -1,6 +1,6 @@
 # Taiko audit details
-- Total Prize Pool: $140,000 in USDC
-  - HM awards: $103,900 in USDC
+- Total Prize Pool: $165,000 in USDC
+  - HM awards: $128,900 in USDC
   - Analysis awards: $5,800 in USDC
   - QA awards: $2,900 in USDC
   - Gas awards: $2,900 in USDC
