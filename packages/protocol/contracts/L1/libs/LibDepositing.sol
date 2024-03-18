@@ -99,7 +99,7 @@ library LibDepositing {
                 // otherwise the function would be gassing out.
                 unchecked {
                     deposits_[i].amount -= _fee;
-                    totalFee += _fee;
+                    totalFee = totalFee + _fee;
                     ++i;
                     ++j;
                 }
