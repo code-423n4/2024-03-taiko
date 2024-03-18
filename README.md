@@ -22,6 +22,8 @@ The 4naly3er report can be found [here](https://github.com/code-423n4/2024-03-ta
 
 - All code inside [packages/protocol/contracts/team](https://github.com/code-423n4/2024-03-taiko/blob/main/packages/protocol/contracts/team) uses ERC20's `transferFrom` instead of `safeTransferFrom`. This is known and acceptable.
 - All findings from our previous audit reports (see below) are ineligible for awards.
+- [fix bridge prove message issue using staticcall](https://github.com/taikoxyz/taiko-mono/pull/16404)
+- [fix a bug in changeBridgedToken](https://github.com/taikoxyz/taiko-mono/pull/16403)
 
 # Overview
 
