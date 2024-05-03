@@ -1,0 +1,962 @@
+==============================================================
+Guild: Code4rena
+Channel: ARCHIVE-Q1-2024 / taiko-mar06
+==============================================================
+
+[02/26/2024 19:15] knownfactc4_29311 (pinned)
+👋 Hello and welcome to the audit channel for the $140,000 in USDC **Taiko** audit!
+
+📆 Audit opens 03/06/2024 20:00 (20:00 UTC) and runs through 03/27/2024 20:00 (20:00 UTC) (21 days).
+
+Please give a warm welcome to the Taiko team, particularly @Daniel Wang, @Brecht, and @d1onys1us, who will be available for questions either here in the channel or via a PRIVATE thread in the CET, SGT, ET timezone(s).
+
+We'll be posting relevant links, documentation, etc. here, so if you intend to participate in this audit, consider enabling notifications for this channel. 🐺 ⏰
+
+Audit Page: https://github.com/code-423n4/2024-03-taiko
+
+
+[03/06/2024 20:02] C4 (pinned)
+**Automated Findings / Publicly Known Issues**
+
+Reminder: all [Automated Findings / Publicly Known Issues](https://github.com/code-423n4/2024-03-taiko#automated-findings--publicly-known-issues) are out of scope and ineligible for awards.
+
+{Embed}
+https://github.com/code-423n4/2024-03-taiko
+GitHub - code-423n4/2024-03-taiko
+Contribute to code-423n4/2024-03-taiko development by creating an account on GitHub.
+Code4rena - ARCHIVE-Q1-2024 - taiko-mar06 [1211753273032319006].txt_Files/e6c0f05a-f107-457e-bc1d-f801e89d4510-31357
+
+
+[03/06/2024 20:03] 0xpopeye
+⚡
+
+
+[03/06/2024 20:06] thebrittfactor
+Pinned a message.
+
+
+[03/06/2024 20:07] knownfactc4_29311
+Pinned a message.
+
+
+[03/06/2024 20:12] Deleted User
+can i use ``yarn install`` instead of ``pnpm install``  to install dependencies ?
+
+
+[03/06/2024 20:16] d1onys1us
+Hello everyone, excited to be here!
+
+{Reactions}
+👋 (6) 🎉 (2) 
+
+[03/06/2024 20:16] d1onys1us
+I would recommend to use pnpm to have the exact dependencies we use. Although yarn should be okay and you can try to compile with foundry after if you want.
+
+
+[03/06/2024 20:17] web3skid
+Is this protocol supposed to work with ERC777?
+
+
+[03/06/2024 20:22] bronze_pickaxe
+Nice pfp :runescapeguy:
+
+
+[03/06/2024 20:26] Deleted User
+Some problems with ``scope.txt`` from the repo if you can solve,       ```packages/protocol/contracts/signal/ISignalService.sol``` is twice   and   ```packages/protocol/contracts/thirdparty.sol```  that is the directory with  .sol extension
+
+
+[03/06/2024 20:27] _theblackpanther
+😄 re-entring at the start huh!
+
+{Reactions}
+😂 (6) 
+
+[03/06/2024 20:28] Deleted User
+``` AddressR.sol ``` instead of  ```AddressResolver.sol```
+
+
+[03/06/2024 20:59] Deleted User
+``LibProposing.sol``  gives a compiler error  with   `` Undeclared identifier. Did you mean "blockhash"?``   `` meta_.blobHash = blobhash(0);``   ,   what should be instead  ?   ``blockhash`` or  ``blobHash``  ??   @d1onys1us
+
+
+[03/06/2024 21:06] d1onys1us
+Please update your compiler to latest one which support Cancun!
+
+
+[03/06/2024 21:07] d1onys1us
+By the way, hardhat / solidity extensions for VS code do not support Cancun yet as far as I know
+
+
+[03/06/2024 21:18] Deleted User
+how can i do it, i used  ``forge b``  that give the error
+
+
+[03/06/2024 21:24] kartoonjoy
+@Deleted User Can the rest of this particular convo go into a thread?
+
+{Reactions}
+👍 
+
+[03/06/2024 21:35] hakan3044
+hello guys
+
+
+[03/06/2024 21:36] hakan3044
+I'm new here, can you guide me?
+
+
+[03/07/2024 03:26] dantaik
+Not supported by default, but later a BridgedERC777Token and ERC777Vault can be created by thirdparties.
+
+
+[03/07/2024 05:07] 0xnirlin
+:chefskiss:
+
+
+[03/07/2024 10:15] Deleted User
+How to compile the contracts in a foundry project ? it gives compiler errors
+
+
+[03/07/2024 10:48] kartoonjoy (pinned)
+**Automated Findings / Publicly Known Issues**
+
+Reminder: all [Automated Findings / Publicly Known Issues](https://github.com/code-423n4/2024-03-taiko#publicly-known-issues) are out of scope and ineligible for awards.
+
+
+[03/07/2024 10:48] kartoonjoy
+Pinned a message.
+
+
+[03/07/2024 11:13] 0xnirlin
+confused in this contest and zksync, what should I do  :kek:
+
+
+[03/07/2024 11:15] 0xdemonnn
+take both of them 🔥
+
+
+[03/07/2024 14:17] 0xc86
+try this
+
+
+[03/07/2024 14:17] 0xc86
+cd packages/protocol/
+pnpm install
+pnpm compile
+pnpm test
+
+
+[03/07/2024 16:56] 0xhajime
+how to fix it?
+
+{Attachments}
+Code4rena - ARCHIVE-Q1-2024 - taiko-mar06 [1211753273032319006].txt_Files/image-1C319.png
+
+
+[03/07/2024 17:12] d1onys1us
+You need to update your version of foundry you can do foundryup
+
+{Reactions}
+👍 (3) 
+
+[03/07/2024 20:02] hakan3044
+can you help me too ?
+
+
+[03/08/2024 04:49] mwendwa
+Started a thread.
+
+
+[03/08/2024 15:50] mahi_vasisth
+Hey guys , can anybody tell me please how can I fix this error.
+
+{Attachments}
+Code4rena - ARCHIVE-Q1-2024 - taiko-mar06 [1211753273032319006].txt_Files/Screenshot_120-B01E4.png
+
+
+[03/08/2024 21:02] 0xhajime
+`forge remappings > remappings.txt`
+
+
+[03/09/2024 08:59] mahi_vasisth
+This is not just because of wrong remappings.Its because  the file GovernorCompatibilityBravoUpgradeable.sol is not exist.
+
+
+[03/09/2024 09:01] mahi_vasisth
+Are u guys not facing this. When you setup your project initially
+
+
+[03/09/2024 09:05] zdravkohr
+I managed to install everything from the first try
+
+
+[03/09/2024 09:05] zdravkohr
+Which is quite rare for me 😄
+
+
+[03/09/2024 09:09] mahi_vasisth
+Are your openzeppelin upgradeable package contain this file.
+
+
+[03/09/2024 09:19] mahi_vasisth
+Are u a new bee there just like me.
+
+
+[03/10/2024 05:59] .anas_22
+Hi I submitted two reports and they disappeared from the UI in less than 24hrs.
+
+
+[03/10/2024 12:57] 0xsorrynotsorry
+have you received mail confirmations for those?
+
+
+[03/10/2024 12:58] .anas_22
+Nope, although I use Hotmail so if it happened that problem is in my mail service.
+
+
+[03/10/2024 13:01] 0xsorrynotsorry
+I recommend submitting those again and confirming the mail receipts.
+And opening a help desk request to give the C4 Team a heads up that you might have duplicate submissions since you couldn´t confirm the first batches´ success in here: https://code4rena.com/help
+
+
+[03/10/2024 13:31] .anas_22
+The UI displayed them again, thanks for your time.
+
+{Reactions}
+hi5 
+
+[03/10/2024 13:33] 0xsorrynotsorry
+Glad there´s no double job for any parties 🫡
+
+
+[03/11/2024 15:29] 0xtendency
+When a message is sent using `bridge::sendMessage`, after the signal is sent, how is the message picked up and then relayed to the destination chain `bridge::processMessage`?
+
+
+[03/12/2024 08:38] scoolj
+Hello guys, i am having this error when i want to compile the code using ```pnpm compile```
+error message
+```  ERR_PNPM_RECURSIVE_EXEC_FIRST_FAIL  Command "compile" not found
+```
+any help?
+
+
+[03/12/2024 08:53] scoolj
+@Daniel Wang, @Brecht, and @d1onys1us
+
+
+[03/12/2024 09:39] .anas_22
+Hello what do you mean by Automated Findings?
+
+
+[03/12/2024 09:44] forgebyola
+findings already found by the bots. No need to find them anymore
+
+
+[03/12/2024 10:41] 0xtendency
+@Daniel Wang can we get someone from the team to be checking this channel and pt for questions🙏
+Faster feedback will help us grasp and go through the contracts faster, thanks
+
+
+[03/12/2024 10:44] mirzdame
+thanks for flagging @Tendency have asked our engineers to check in here shortly and come back on all open questions. 🙏
+
+{Reactions}
+thankyou 
+
+[03/12/2024 10:49] dani_who_daniel
+i'm here, but actually i'm trying to reproduce the issue. This is a good old "it works on my end" (regarding `ERR_PNPM_RECURSIVE_EXEC_FIRST_FAIL`) still.. 🙂 will keep trying.
+
+
+[03/12/2024 10:50] dani_who_daniel
+So it is an off-chain relayer service built for that.
+
+
+[03/12/2024 10:51] dani_who_daniel
+But also - via the UI - you can claim it for yourself -> in this case the neccessary proofs + message struct encoding will be put together within the ui.
+
+{Reactions}
+thankyou 
+
+[03/12/2024 11:04] dantaik
+We don't have this compiling error at all.
+
+
+[03/12/2024 11:10] dantaik
+I re-git cloned the repo on MacOS, no compilation errors.
+
+
+[03/12/2024 11:12] dantaik
+One thing that people can try is to delete pnpm-lock.yaml in the root dir and try `pnpm install` again
+
+
+[03/12/2024 11:21] .anas_22
+You mean the ones listed on the Slyther Static analysis report?
+
+
+[03/12/2024 11:41] dani_who_daniel
+Here: https://github.com/code-423n4/2024-03-taiko/blob/main/4naly3er-report.md
+
+{Reactions}
+🙂 
+
+[03/12/2024 11:57] .anas_22
+Thanks @dani_who_daniel.
+
+{Reactions}
+🫡 
+
+[03/12/2024 13:01] scoolj
+Hello, how did you fix this ?
+
+
+[03/12/2024 13:05] ihtishamsudo
+tried updating your pnpm version?
+
+
+[03/12/2024 13:08] ihtishamsudo
+updating my pnpm version to latest 
+re clonning Repo
+pnpm install
+pnpm compile 
+pnpm test 
+works for me
+
+{Reactions}
+🫡 
+
+[03/12/2024 14:08] 0xnirlin
+ser tell me a critical
+
+
+[03/12/2024 14:16] ihtishamsudo
+there’s no sequencer
+
+{Reactions}
+😂 (2) 
+
+[03/12/2024 14:23] haxatron1
+Ser my critical
+
+
+[03/12/2024 14:23] haxatron1
+You exposed it 😡
+
+{Reactions}
+gummy_wink 
+
+[03/12/2024 14:37] 0xnirlin
+😭🤣🤣
+
+
+[03/12/2024 15:39] mahi_vasisth
+I don't know what's wrong there.
+
+
+[03/12/2024 17:09] zdravkohr
+Is `TaikoL2._calcPublicInputHash()`'s purpose to ensure that anchoring happens for consecutive blocks only?
+
+
+[03/12/2024 17:46] brechtpd
+- yes ensures that the anchor function can only be called once in a block
+- ensures that the block hash values returned by the ‘block hash’ opcode in the current block are consistent with previous blocks
+
+{Reactions}
+👍 (2) 
+
+[03/13/2024 17:15] zdravkohr
+Hey, why is the merkle trie proof in `Bridge.processMessage()` needed? Can't we just check if the signal is received by loading the value in the SignalService
+
+
+[03/14/2024 00:50] dantaik
+processMessage() is called on the destination chain, sending the siangal is on the source chain
+
+
+[03/15/2024 00:24] irving6969
+bridge contract gonna deploy on l1 or l2?
+
+
+[03/15/2024 02:26] dantaik
+We identified and fixed two bugs:
+
+-  https://github.com/taikoxyz/taiko-mono/pull/16404
+- https://github.com/taikoxyz/taiko-mono/pull/16403
+
+{Embed}
+https://github.com/taikoxyz/taiko-mono/pull/16404
+fix(protocol): fix bridge prove message issue using staticcall by d...
+Previously proveSignalReceived in signalService is a view function, but now it can cache data so it's no longer a view function. Therefore, in Bridge.sol, we can no longer use staticcall.
+Code4rena - ARCHIVE-Q1-2024 - taiko-mar06 [1211753273032319006].txt_Files/16404-CED2D
+
+{Embed}
+https://github.com/taikoxyz/taiko-mono/pull/16403
+fix(protocol): fix a bug in changeBridgedToken by dantaik · Pull Re...
+Reported by 0xtendency on Discord #code4rena
+Code4rena - ARCHIVE-Q1-2024 - taiko-mar06 [1211753273032319006].txt_Files/16403-6EF59
+
+{Reactions}
+👍 
+
+[03/15/2024 05:23] haxatron1
+Ser, you are not supposed to be fixing bugs on the public repo during the code4rena competition. 
+
+CC: @Tendency (your bug got leaked) @kartoonjoy | C4🎇🎇
+
+{Reactions}
+thankyou (3) 💯 (2) 
+
+[03/15/2024 05:54] daniel526
+Should be added to the README as known issues but the warden be awarded for it later!
+
+
+[03/15/2024 05:55] haxatron1
+Not known issues, this was probably flagged by wardens in private thread.
+
+
+[03/15/2024 06:13] 0xtendency
+This isn't nice
+
+
+[03/15/2024 06:15] kartoonjoy
+Wardens: Assuming that these two issues are based on code being reviewed during this C4 audit, they are now out of play. Any finding submissions created beyond 9:26p CT (the time of the sponsors posting), will be NOT be awarded. Thank you!
+
+
+[03/15/2024 06:16] irving6969
+what about i told them in private thread?
+
+
+[03/15/2024 06:16] irving6969
+i haven't submitted yet
+
+
+[03/15/2024 06:16] irving6969
+but i told the bug in private thread
+
+
+[03/15/2024 06:17] irving6969
+will this be out of play ?
+
+
+[03/15/2024 06:17] kartoonjoy
+Thanks for the heads up. We will take a look at the thread.
+
+
+[03/15/2024 06:18] 0xtendency
+Well, am grateful I only discussed about this issue on pt.
+I flagged this issue since 12th of march
+
+{Reactions}
+🆗 
+
+[03/15/2024 06:20] 0xtendency
+Is my efforts nullified due to sponsors mistake?
+
+
+[03/15/2024 06:20] kartoonjoy
+We'll take a look. You can tag me in your PT.
+
+
+[03/15/2024 07:11] forgebyola
+I also don't think this should be allowed. At least for in-scope contracts
+
+
+[03/15/2024 07:44] dani_who_daniel
+No, will try to make sure we reward, since it was clearly our fault. We will figure out something, and sorry for any inconveniences - our intention was not bad at all, just also under time pressure as we need to proceed.
+
+{Reactions}
+empathy 💜 
+
+[03/15/2024 07:50] mrpotatomagic
+If the submissions before that time are going to be awarded, please do that outside the C4 pot. There are still 13 days left for this audit and I'm sure there could've been duplicates. I think this would be fair to those who submitted the bug as well as other wardens who might've not reviewed those contracts yet.
+
+
+[03/15/2024 08:13] haxatron1
+It is fine to fix issues but _please_ do it in private repository that Github offers and not post fixes in the public repo which will compromise the fairness and integrity of the C4 contest.
+
+{Reactions}
+👍 (5) 
+
+[03/15/2024 09:23] dantaik
+Sorry about that. We are busy fixing issues to prepare for mainnet launch, but yes, we now have a private repo for bug fixes.
+
+{Reactions}
+🎉 (2) 
+
+[03/15/2024 11:08] 0xtendency
+I dropped a question on pt @Daniel Wang @Brecht @d1onys1us
+
+
+[03/15/2024 12:47] dantaik
+Sorry I didn't pay much attention here, but I did answer most of questions in each thread.
+
+
+[03/15/2024 14:00] dantaik
+**Someone found a valid bug :D**
+
+
+[03/15/2024 19:25] sockdrawermoney
+we are in discussion with the Taiko team on this and that while these scenarios suck when they happen and we work very hard to avoid them, we are prepared for them and we will have an update as soon as we can.
+
+{Reactions}
+thankyou (5) 
+
+[03/16/2024 06:47] dantaik
+This is the case now. We are fixing things in our private repo, but you will still see some non-bug-fixing code changes in the open-repo, such as configuration changes, documentation improvements.
+
+
+[03/16/2024 08:06] sockdrawermoney
+**UPDATE:** We've had some discussions about the PRs.
+
+In the interest of fairness, any findings addressed by the pull requests will be marked as out of scope.
+
+We got together with and discussed how to make things right for wardens. **Taiko has agreed to boost the HM pool by $25k.** That update will be reflected in the repo soon.
+
+We are very sorry this happened. It remains one of our top priorities to educate sponsor dev teams on how violating the code-freeze mid-audit breaks the C4 model.
+
+
+[03/16/2024 08:09] haxatron1
+But what about those wardens who submitted issues related to those PRs?
+
+
+[03/16/2024 08:13] sockdrawermoney
+The issues are now out of scope. It sucks a lot. But there is no good way to include them in the awards pool without breaking the model in one way or another.
+
+
+[03/16/2024 08:15] haxatron1
+Isn't it unfair to people like @Tendency who discovered the bug discussed with sponsor in private chat and then got their bug leaked
+
+{Reactions}
+👍 
+
+[03/16/2024 08:16] haxatron1
+Hope there is some award for them outside of the award pool
+
+
+[03/16/2024 08:19] sockdrawermoney
+We have suggested this to the sponsor. We are aware there is no great solution. This has happened about 3 times in c4 history and it just always sucks. It’s why we are extremely restrictive of access during competitions
+
+
+[03/16/2024 08:21] bytes032
+We can't realistically know who have found the issue first (some guys just don't submit until last minute). Or they might have submitted already but didn't reach out to the sponsor.
+
+But $25K increase for HM is 25% so imo it negates the damage cause if you've found more bugs you'd be rewarded even better.
+
+
+[03/16/2024 08:22] bytes032
+I had a *similar* situation with Ajna where I found a bug that wasnt really OOS, but the judge decided it was OOS, so Ajna rewarded separately.
+
+
+[03/16/2024 08:41] kaveyjoe
+dont know  about others but One issue that sponser fix by saying   found by @Tendency  c4 through discord  , so i think his finding should be  awarded .
+
+
+[03/16/2024 08:48] 0xtendency
+The outcome wasn't what i expected, but I think right now, the sponsors can't be forced to do more than what they have already.
+25k added to the hm pot is good for us, any additional reward can only be out of good will
+
+{Reactions}
+🫡 (8) 💜 (13) 
+
+[03/16/2024 10:03] forgebyola
+Thanks for taking it like a champ
+
+{Reactions}
+👍 (2) 
+
+[03/16/2024 10:06] forgebyola
+man...idek
+
+
+[03/16/2024 19:24] dani_who_daniel
+Beside the  increase we acknowledge Tendency’s finding so we will try to figure out something for him and for those who submitted the issue via the form before the PR opened. We dont want to have bad taste in anyone’s mouth, and really sorry it happened.
+
+{Reactions}
+💜 (16) 👑 (12) 
+
+[03/17/2024 08:25] daniel526
+?
+
+
+[03/17/2024 08:28] scoolj
+sorry ... my boy!!
+
+
+[03/17/2024 10:01] zzebra83
+@dani_who_daniel sent a DM, thanks!
+
+{Reactions}
+🫡 
+
+[03/19/2024 15:16] dantaik
+How can I invite people to this channel please?
+
+
+[03/19/2024 15:16] dantaik
+`yuea7583`
+
+
+[03/19/2024 15:26] 0xtendency
+You will have to right click on c4 server icon, then click on `Invite People` to send an invite
+
+
+[03/19/2024 15:43] kartoonjoy
+@YueA welcome
+
+{Reactions}
+🫡 
+
+[03/20/2024 03:09] 0x11singh99
+tstore and tload not compiling  how can I compile them
+
+
+[03/20/2024 03:29] dantaik
+Check the compile command in package.json
+
+{Reactions}
+👍 
+
+[03/21/2024 02:09] ladboy233
+Will the Taikko ERC20 token airdrop and delegation happens in ethereum mainnet or on L2?
+
+
+[03/21/2024 02:15] ladboy233
+Why do we need a seperate USDCAdapter?
+
+
+[03/21/2024 05:21] dantaik
+Taiko L2.
+
+
+[03/21/2024 05:21] dantaik
+In case we want to convert our BridgedERC20 token to a contract that Circle approves and manages.
+
+
+[03/21/2024 10:55] monrel
+@dani_who_daniel sent a dm, please take a look if you have time 🙂
+
+{Reactions}
+🫡 
+
+[03/21/2024 13:35] hex.byte
+Hi @dani_who_daniel , sent you a fr. Please accept, unable to dm you.
+
+{Reactions}
+🫡 
+
+[03/22/2024 04:13] wangxx2026
+@dani_who_daniel sent a dm
+
+{Reactions}
+🫡 
+
+[03/22/2024 11:12] saediek
+@Daniel Wang  sent a fr
+
+
+[03/22/2024 12:23] kartoonjoy
+Please dont DM. Instead, create a private thread for sponsors. Thanks!
+
+
+[03/22/2024 15:47] okolicodes
+@kartoonjoy | C4🎇🎇 I think this ending date is wrong as the audit page on c4 is saying something different
+
+
+[03/22/2024 15:55] kartoonjoy
+Will take a look. thank you
+
+
+[03/22/2024 16:15] knownfactc4_29311
+Top post had a typo, the website date, the 27th is the correct one.
+
+{Reactions}
+👍 
+
+[03/26/2024 07:02] zzebra83
+almost done with my review of Taiko, was a tough one! special shoutout to @dani_who_daniel , what a great sponsor!  day and night, always willing to answer my questions, no matter what they were,  :thankyou: Sir!
+
+{Reactions}
+❤️ (6) 
+
+[03/26/2024 07:40] dani_who_daniel
+thanks for trying to strengthen our protocol ! 🙂
+
+{Reactions}
+✅ (2) 
+
+[03/26/2024 14:58] daniel526
+Thank you @dani_who_daniel 💜
+
+{Reactions}
+❤️ 
+
+[03/26/2024 20:13] udsen_
+@dani_who_daniel sent a dm, Thanks.
+
+
+[03/27/2024 20:02] C4
+**🚨 AUDIT ALERT**
+
+@🐺Wardens  The **Taiko** audit is now closed! Huge thanks to everyone who participated 🔍, whether you submitted a finding or not.
+
+What's next: The sponsor team and judge will review the findings over the next couple of weeks. Keep an eye on #📢announcements for regular updates on how the audit is progressing through awarding 🤑🏆, judging 🧑‍⚖️ and reporting 📜. Feel free to ping a Contest-Admin if you have questions along the way!
+
+
+[03/28/2024 05:30] saq_143
+submissions ?
+
+
+[03/28/2024 05:33] kaveyjoe
+370
+
+{Reactions}
+👍 (4) ✅ (5) 
+
+[04/01/2024 14:41] 7a4raf
+Lmao I want to wen results so bad😂
+
+{Reactions}
+😅 (3) 
+
+[04/03/2024 11:40] _paperparachute
+https://tenor.com/view/im-watching-watch-you-eyes-on-you-kid-cute-gif-16282723
+
+{Embed}
+https://tenor.com/view/im-watching-watch-you-eyes-on-you-kid-cute-gif-16282723
+Code4rena - ARCHIVE-Q1-2024 - taiko-mar06 [1211753273032319006].txt_Files/im-watching-watch-you-246A5.png
+
+{Reactions}
+😳 (4) 😅 (2) 
+
+[04/07/2024 16:40] mansa11
+https://tenor.com/view/waiting-waiting-patiently-waiting-for-you-waiting-on-you-gif-15489516379864441176
+
+{Embed}
+https://tenor.com/view/waiting-waiting-patiently-waiting-for-you-waiting-on-you-gif-15489516379864441176
+Code4rena - ARCHIVE-Q1-2024 - taiko-mar06 [1211753273032319006].txt_Files/waiting-waiting-patiently-C8F8A.png
+
+{Reactions}
+✅ (2) 😂 (3) 
+
+[04/13/2024 16:23] josephdara
+:4739_Skeletor:
+
+{Reactions}
+✅ (2) 
+
+[04/15/2024 12:02] josephdara
+:4739_Skeletor:
+
+
+[04/15/2024 12:33] olanre_waju
+@PaperParachute is typing  :chefskiss:
+
+
+[04/15/2024 12:47] _paperparachute
+No he isn't 😅
+
+{Reactions}
+😂 (9) chefskiss 
+
+[04/15/2024 12:48] _paperparachute
+
+
+{Attachments}
+Code4rena - ARCHIVE-Q1-2024 - taiko-mar06 [1211753273032319006].txt_Files/image0-2F105.gif
+
+
+[04/15/2024 12:54] josephdara
+Ser. Let me have my $5 for pizza
+
+
+[04/15/2024 14:06] thebrittfactor
+🤑 🎉  Awards for **Taiko**:
+
+$39,108.58 USDC » @monrel 
+$19,343.84 USDC » @t0x1c 
+$14,677.70 USDC » Shield (@Viraz, @0xA5DF, @Dravee and @Udsen)
+$9,799.48 USDC » @zzebra83 
+$7,230.37 USDC » @MrPotatoMagic 
+$7,017.62 USDC » @0xladboy | Sparkware 
+$6,413.92 USDC » @joaovwfreire 
+$6,221.51 USDC » @alexfilippov314 
+$2,740.36 USDC » @Tendency 
+$2,181.76 USDC » @CodeCipher 
+$2,037.77 USDC » @pa6kuda 
+$2,037.77 USDC » @t4sk 
+$2,004.23 USDC » mojito_auditor 
+$1,954.13 USDC » @Isaac 
+$1,503.18 USDC » 0xleadwizard 
+$1,503.18 USDC » @wangxx2026 
+$1,237.18 USDC » blockdev 
+$1,185.32 USDC » @Sathish9098 
+$1,099.42 USDC » @josephdara 
+$1,030.98 USDC » @Mahi_Vasisth 
+$868.64 USDC » @imare 
+$835.10 USDC » @Limbooo 
+$550.66 USDC » @kaveyjoe 
+$457.12 USDC » @myd8418 
+$423.58 USDC » @0xepley 
+$423.58 USDC » @Aariiif 
+$423.58 USDC » @Fouzantanveer 
+$423.58 USDC » @hassanshakeel13 
+$423.58 USDC » @popeye 
+$423.58 USDC » roguereggiant 
+$423.58 USDC » @yongskiws 
+$280.40 USDC » @Albahaca 
+$277.77 USDC » @DadeKuma 
+$246.86 USDC » @hunter_w3b 
+$221.41 USDC » @0x11singh99 
+$221.41 USDC » @hihen 
+$221.41 USDC » @pfapostol 
+$221.41 USDC » @slvDev 
+$221.41 USDC » @zabihullahazadzoi 
+$211.06 USDC » Fassi_Security (@bronze_pickaxe and @mxuse)
+$211.06 USDC » @grearlake 
+$187.87 USDC » @0xAnah 
+$187.87 USDC » @IllIllI 
+$187.87 USDC » @dharma09 
+$177.52 USDC » @iamandreiski 
+$177.52 USDC » @lanrebayode77 
+$119.29 USDC » @cheatc0d3 
+$119.29 USDC » clara
+
+
+[04/15/2024 14:07] thebrittfactor
+$92.53 USDC » @JCK 
+$92.53 USDC » @foxb868 
+$85.75 USDC » @ICP 
+$60.30 USDC » Pechenite (@bozho and @radev_sw)
+$60.30 USDC » @oualidpro 
+$60.30 USDC » @rjs 
+$60.30 USDC » @sxima 
+$58.99 USDC » @0xbrett8571 
+$58.99 USDC » @Lin 
+$58.99 USDC » @emerald7017 
+$33.54 USDC » @Kalyan-Singh 
+$33.54 USDC » Masamune 
+$33.54 USDC » @n1punp 
+$26.76 USDC » @0xhacksmithh 
+$26.76 USDC » Auditor2947 
+$26.76 USDC » @K42 Ψ 
+$26.76 USDC » @SAQ 
+$26.76 USDC » @SM3_SS 
+$26.76 USDC » @SY_S 
+$26.76 USDC » @caglankaan 
+$26.76 USDC » @unique
+
+🏁 Findings summary
+-------------------------------------
+High risk findings: 5 unique (19 total)
+Med risk findings: 14 unique (38 total)
+Gas reports: 28 (Best: DadeKuma)
+QA reports: 33 (Best: MrPotatoMagic)
+Advanced analysis reports: 22 (Best: kaveyjoe)
+
+Awards will be distributed on Polygon within the next week. Congratulations all!  💸 💸 💸
+
+*Note: If you participated in this audit and don’t see your name on this list, please wait until the report is published and the findings repo is made public to check on your submissions.*
+
+{Reactions}
+🔐 (5) C4Keycap (7) thankyou (6) chefskiss (5) 
+
+[04/15/2024 14:09] sathish9098kumar
+Nice
+
+
+[04/15/2024 14:12] t0x1c.c0de
+Congrats @monrel , Shield team and everyone else! 
+Some real cool findings 👏🏻
+
+{Reactions}
+🙏 (5) 👑 
+
+[04/15/2024 14:23] josephdara
+GG:4739_Skeletor:
+
+
+[04/15/2024 14:23] 0xtendency
+Finally made it to top 10.
+Congrats everyone 👏
+
+{Reactions}
+👏🏻 (13) 🚀 (9) 
+
+[04/15/2024 14:44] zzebra83
+GG everyone! 🎊
+
+{Reactions}
+🎉 (2) 
+
+[04/15/2024 15:07] mrpotatomagic
+Congrats everyone, some amazing findings to learn from 👏 🎉
+
+{Reactions}
+❤️ (9) 
+
+[04/15/2024 15:22] ladboy233
+👍
+
+{Reactions}
+👍 (5) 
+
+[04/15/2024 15:49] viraz4331
+Congrats everyone 🙂
+
+{Reactions}
+🎉 (5) 
+
+[04/15/2024 16:08] jovi6132
+Congrats guys!! 🔥
+
+
+[04/15/2024 16:09] jovi6132
+Jeez, @monrel, you have rocked this contest. Really solid findings 👏
+
+{Reactions}
+❤️ (2) 
+
+[04/15/2024 16:17] oxtenma
+Congrats @0xladboy | Sparkware 🔥
+
+
+[04/15/2024 16:28] baz1ka
+no way so much findings😭  impatiently waiting for report🥰
+
+
+[04/15/2024 16:30] baz1ka
+or can someone give link to your report just to see until I forgot project's code
+
+
+[04/15/2024 16:47] stockmart
+Started a thread.
+
+{Reactions}
+🔥 (4) 
+
+[04/15/2024 22:10] collinsoden
+Congrats @Tendency
+
+
+[04/15/2024 22:12] 0xtendency
+Thank you ser 🫡
+
+{Reactions}
+C4Keycap (2) 
+
+[04/21/2024 00:22] 0xtendency
+This has now been paid 💰 🫰
+
+{Reactions}
+💯 
+
+[04/25/2024 02:16] itsmetechjay
+ℹ️ This channel is pending archive.   As a result, any private threads will be permanently deleted on Friday, 03 May 2024. Please make sure to grab anything you might need before then.
+
+
+[05/03/2024 15:25] itsmetechjay
+ℹ️ Reminder: this channel will be deleted in 24 hours.
+
+
+==============================================================
+Exported 172 message(s)
+==============================================================
